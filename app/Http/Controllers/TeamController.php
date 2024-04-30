@@ -42,8 +42,8 @@ class TeamController extends Controller
         // Distribuindo os goleiros pelos times
         $i = 0;
         foreach ($goalkeepers as $goalkeeper) {
-            $teams[$i][] = $goalkeeper;
-            $i = $i++;
+            $teams[$i][] = $goalkeeper->level;
+            $i++;
         }
 
         $i = 0;
@@ -52,13 +52,12 @@ class TeamController extends Controller
             // Verifica se o time atual já possui o máximo de jogadores
             // Se o time atual já tiver o máximo jogadores, passa para o próximo time
             if (count($teams[$i]) < $maxPlayersPerTeam) {
-                $teams[$i][] = $player;
+                $teams[$i][] = $player->level;
             } else {
                 $i++;
-                $teams[$i][] = $player;
+                $teams[$i][] = $player->level;
             }
         }
-
 
         $data['teams'] = $teams;
 
