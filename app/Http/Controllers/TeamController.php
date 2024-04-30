@@ -49,7 +49,6 @@ class TeamController extends Controller
         $i = 0;
         // Distribuindo os jogadores de linha pelos times
         foreach ($players as $player) {
-            echo $i;
             // Verifica se o time atual já possui o máximo de jogadores
             // Se o time atual já tiver o máximo jogadores, passa para o próximo time
             if (count($teams[$i]) < $maxPlayersPerTeam) {
