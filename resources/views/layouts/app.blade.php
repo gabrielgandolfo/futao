@@ -40,6 +40,36 @@
                             class="navbar-brand-image">
                     </a>
                 </h1>
+
+                @guest
+                <div class="nav-item d-none d-md-flex me-3">
+                    <div class="btn-list">
+                        <a href="{{ route('login') }}" class="btn" target="_blank" rel="noreferrer">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/brand-github -->
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-star">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path
+                                    d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z" />
+                            </svg>
+                            Login
+                        </a>
+                        <a href="{{ route('register') }}" class="btn" target="_blank" rel="noreferrer">
+                            <!-- Download SVG icon from http://tabler-icons.io/i/heart -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-pink" width="24" height="24"
+                                viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572">
+                                </path>
+                            </svg>
+                            Cadastro
+                        </a>
+                    </div>
+                </div>
+                @endguest
+
                 @auth
                 <div class="navbar-nav flex-row order-md-last">
 

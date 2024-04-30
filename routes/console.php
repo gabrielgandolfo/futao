@@ -3,6 +3,8 @@
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 
-Artisan::command('inspire', function () {
-    $this->comment(Inspiring::quote());
-})->purpose('Display an inspiring quote')->hourly();
+use App\Models\Player;
+
+Artisan::command('update-players', function () {
+    Player::where('confirmed', 1)->update(['confirmed' => 0]);
+})->purpose('Jogadores atualizados')->weekly();

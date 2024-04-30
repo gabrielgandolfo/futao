@@ -20,4 +20,5 @@ Route::middleware('auth')->group(function () {
     Route::resource('players', PlayerController::class);
 
     Route::get('teams', [TeamController::class, 'index'])->name('teams.index');
+    Route::post('teams', [TeamController::class, 'generate'])->name('teams.generateTeams');
 });
