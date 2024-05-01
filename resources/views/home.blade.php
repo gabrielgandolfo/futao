@@ -69,10 +69,10 @@
                             </div>
                             <div class="col">
                                 <div class="font-weight-medium">
-                                    {{ $totalPlayersGoalkeeper }}
+                                    {{ $totalPlayersConfirmed }}
                                 </div>
                                 <div class="text-muted">
-                                    Goleiros Confirmados
+                                    Jogadores de linha Confirmados
                                 </div>
                             </div>
                         </div>

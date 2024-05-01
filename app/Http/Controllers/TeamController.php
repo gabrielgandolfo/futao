@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Player;
+use Illuminate\Support\Collection;
+
 
 class TeamController extends Controller
 {
@@ -59,11 +61,6 @@ class TeamController extends Controller
                 $teams[$i][] = $player;
             }
         }
-
-        // echo "<pre>";
-        // print_r($teams);
-        // die();
-
 
         $data['teams'] = $teams;
 
