@@ -19,15 +19,16 @@ class TeamController extends Controller
     public function generate(Request $request)
     {
         // Selecionando os jogadores de linha confirmados, ordenando pela qualidade para que fique equilibrado
+        // Modifiquei para ordem randomica para não deixar os melhores primeiro ou por ultimo (estou revisando a lógica final)
         $players = Player::where('confirmed', true)
             ->where('goalkeeper', false)
-            ->orderBy('level', 'desc')
+            ->inRandomOrder()
             ->get();
 
         // Selecionando apenas os goleiros confirmados
         $goalkeepers = Player::where('confirmed', true)
             ->where('goalkeeper', true)
-            ->orderBy('level', 'desc')
+            ->inRandomOrder()
             ->get();
 
         // Definindo o limite de jogadores por time
@@ -58,6 +59,10 @@ class TeamController extends Controller
                 $teams[$i][] = $player;
             }
         }
+
+        // echo "<pre>";
+        // print_r($teams);
+        // die();
 
 
         $data['teams'] = $teams;

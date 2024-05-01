@@ -9,6 +9,15 @@
                 </h2>
             </div>
         </div>
+        <div class="col-auto ms-auto d-print-none">
+            <div class="btn-list">
+                <span class="d-none d-sm-inline">
+                    <a href="{{ route('teams.index') }}" class="btn">
+                        Gerar Novamente
+                    </a>
+                </span>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -16,9 +25,6 @@
     <div class="container-xl">
         <div class="row row-cards">
             @foreach ($teams as $team)
-
-
-
 
             <div class="col-4">
                 <div class="card">

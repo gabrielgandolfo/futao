@@ -11,7 +11,7 @@
             <div class="col-auto ms-auto d-print-none">
                 <div class="btn-list">
                     <span class="d-none d-sm-inline">
-                        <a href="#" class="btn">
+                        <a href="{{ route('teams.index') }}" class="btn">
                             Gerar Times
                         </a>
                     </span>
